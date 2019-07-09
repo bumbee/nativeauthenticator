@@ -2,7 +2,7 @@ import bcrypt
 import dbm
 import os
 from datetime import datetime
-from jupyterhub.auth import Authenticator
+from jupyterhub.auth import Authenticator, LocalAuthenticator
 from pathlib import Path
 
 from sqlalchemy import inspect
@@ -243,3 +243,5 @@ class NativeAuthenticator(Authenticator):
 
         if self.delete_firstuse_db_after_import:
             self.delete_dbm_db()
+class LDAPLocalAuthenticator(LocalAuthenticator, NativeAuthenticator):
+    pass
