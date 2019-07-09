@@ -243,5 +243,5 @@ class NativeAuthenticator(Authenticator):
 
         if self.delete_firstuse_db_after_import:
             self.delete_dbm_db()
-class LDAPLocalAuthenticator(LocalAuthenticator, NativeAuthenticator):
+class NativeLocalAuthenticator(LocalAuthenticator, NativeAuthenticator):
     pass
