@@ -3,4 +3,4 @@
 """
 from nativeauthenticator.nativeauthenticator import NativeAuthenticator
 
-__all__ = [NativeAuthenticator]
+__all__ = [NativeAuthenticator, NativeLocalAuthenticator]
